@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
-import time
 
 class LoginPage(BasePage):
     def should_be_login_page(self):
@@ -26,4 +25,3 @@ class LoginPage(BasePage):
         password_submit.send_keys(password)
         submit_button = self.browser.find_element(*LoginPageLocators.SUBMIT_BUTTON)
         submit_button.click()
-
